@@ -12,8 +12,6 @@ export default class XOverlayFrame extends OverlayFrame {
           :host {
             min-width: 6rem;
             max-width: 20rem;
-            margin-top: .125rem;
-            margin-bottom: .125rem;
             border: 1px solid #dddbda;
             border-radius: .25rem;
             padding: .25rem 0;

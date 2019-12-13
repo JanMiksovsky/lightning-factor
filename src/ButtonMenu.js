@@ -3,12 +3,12 @@ import * as template from "../node_modules/elix/src/template.js";
 import XButton from './Button.js';
 import XMenu from './Menu.js';
 import MenuButton from "../node_modules/elix/src/MenuButton.js";
-import XOverlayFrame from "./OverlayFrame.js";
+import XPopup from "./Popup.js";
 
 export default class XButtonMenu extends MenuButton {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
-      framePartType: XOverlayFrame,
+      popupPartType: XPopup,
       menuPartType: XMenu,
       sourcePartType: XButton
     });
@@ -36,7 +36,7 @@ export default class XButtonMenu extends MenuButton {
             padding: 0;
           }
 
-          #popupContainer {
+          #popup {
             margin-top: .125rem;
             margin-bottom: .125rem;            
           }

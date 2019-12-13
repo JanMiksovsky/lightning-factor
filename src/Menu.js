@@ -48,7 +48,7 @@ export default class XMenu extends Menu {
           }
 
           ::slotted(*) {
-            cursor: pointer;
+            /* cursor: pointer; */
           }
 
           ::slotted(*) {
@@ -62,11 +62,12 @@ export default class XMenu extends Menu {
             padding: .5rem .75rem;
             color: #080707;
             white-space: nowrap;
-            cursor: pointer;
+            /* cursor: pointer; */
           }
 
-          ::slotted(:hover) {
-            background-color: #f3f2f2;            
+          ::slotted(:hover),
+          ::slotted([selected]) {
+            background-color: #f3f2f2;
           }
         </style>
       `
