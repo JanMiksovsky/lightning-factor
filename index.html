@@ -7,16 +7,104 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="main.css">
   <script type="module" src="./src/ButtonMenu.js"></script>
+  <script type="module" src="./src/Carousel.js"></script>
+  <script type="module" src="./src/CarouselSlideshow.js"></script>
+
+  <style>
+    body>*+* {
+      margin-top: 1rem;
+    }
+
+    x-carousel,
+    x-carousel-slideshow {
+      display: block;
+      width: 640px;
+    }
+
+    .card {
+      border-radius: .25rem;
+      border: 1px solid #dddbda;
+      box-sizing: border-box;
+    }
+
+    .cardDetails {
+      background: #fff;
+      box-sizing: border-box;
+      height: 6.625rem;
+      padding: .75rem;
+      text-align: center;
+    }
+
+    .cardImage {
+      display: block;
+    }
+
+    .cardTitle {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+  </style>
 
 </head>
 
 <body>
+
   <x-button-menu>
     <div>One</div>
     <div>Two</div>
     <div>Three</div>
     <div>Four</div>
   </x-button-menu>
+
+  <x-carousel>
+    <div class="card">
+      <img class="cardImage" src="images/carousel/carousel-01.jpg">
+      <div class="cardDetails">
+        <h2 class="cardTitle">First Card</h2>
+        <div class="cardDescription">First card description</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="cardImage" src="images/carousel/carousel-02.jpg">
+      <div class="cardDetails">
+        <h2 class="cardTitle">Second Card</h2>
+        <div class="cardDescription">Second card description</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="cardImage" src="images/carousel/carousel-03.jpg">
+      <div class="cardDetails">
+        <h2 class="cardTitle">Third Card</h2>
+        <div class="cardDescription">Third card description</div>
+      </div>
+    </div>
+  </x-carousel>
+
+  <x-carousel-slideshow playing="false">
+    <div class="card">
+      <img class="cardImage" src="images/carousel/carousel-01.jpg">
+      <div class="cardDetails">
+        <h2 class="cardTitle">First Card</h2>
+        <div class="cardDescription">First card description</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="cardImage" src="images/carousel/carousel-02.jpg">
+      <div class="cardDetails">
+        <h2 class="cardTitle">Second Card</h2>
+        <div class="cardDescription">Second card description</div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="cardImage" src="images/carousel/carousel-03.jpg">
+      <div class="cardDetails">
+        <h2 class="cardTitle">Third Card</h2>
+        <div class="cardDescription">Third card description</div>
+      </div>
+    </div>
+  </x-carousel-slideshow>
+
 </body>
 
 </html>
