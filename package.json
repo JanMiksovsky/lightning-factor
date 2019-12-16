@@ -2,6 +2,6 @@
   "name": "slds-elix",
   "version": "1.0.0",
   "dependencies": {
-    "elix": "9.0.1"
+    "elix": "JanMiksovsky/elix#slds"
   }
 }
