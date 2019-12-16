@@ -11,7 +11,7 @@ export default class XButton extends SeamlessButton {
           /* slds-button */
           :host {
             padding: 0;
-            background: 0 0;
+            background: transparent;
             background-clip: border-box;
             border: 1px solid transparent;
             border-radius: .25rem;
