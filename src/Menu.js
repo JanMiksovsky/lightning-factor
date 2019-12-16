@@ -53,11 +53,7 @@ export default class XMenu extends Menu {
 
           ::slotted(*) {
             position: relative;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-pack: justify;
             justify-content: space-between;
-            -ms-flex-align: center;
             align-items: center;
             padding: .5rem .75rem;
             color: #080707;
