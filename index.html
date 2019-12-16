@@ -15,8 +15,10 @@
       margin-top: 1rem;
     }
 
-    x-button-menu {
+    #buttonMenuContainer {
+      background: rgb(242, 242, 242);
       margin-bottom: 10rem;
+      padding: 1rem;
     }
 
     x-carousel,
@@ -56,12 +58,14 @@
 
 <body>
 
-  <x-button-menu>
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-  </x-button-menu>
+  <div id="buttonMenuContainer">
+    <x-button-menu>
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+    </x-button-menu>
+  </div>
 
   <x-carousel>
     <div class="card">
