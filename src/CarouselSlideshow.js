@@ -21,6 +21,7 @@ export default class XCarouselSlideshow extends CarouselSlideshow {
       proxyListOverlap: false,
       proxyListPartType: CenteredStrip,
       proxyPartType: XPageDot,
+      selectionTimerDuration: 5000,
       showArrowButtons: false,
       stagePartType: SlidingStage
     });
