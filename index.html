@@ -1,78 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+    <script type="module" src="./src/ButtonMenu.js"></script>
+    <script type="module" src="./src/Carousel.js"></script>
+    <script type="module" src="./src/CarouselSlideshow.js"></script>
+    <script type="module" src="./src/DropdownList.js"></script>
 
-<head>
+    <style>
+      body > * + * {
+        margin-top: 1rem;
+      }
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="main.css">
-  <script type="module" src="./src/ButtonMenu.js"></script>
-  <script type="module" src="./src/Carousel.js"></script>
-  <script type="module" src="./src/CarouselSlideshow.js"></script>
-  <script type="module" src="./src/DropdownList.js"></script>
+      #buttonMenuContainer {
+        background: rgb(242, 242, 242);
+        padding: 1rem;
+      }
 
-  <style>
-    body>*+* {
-      margin-top: 1rem;
-    }
+      x-dropdown-list {
+        width: 200px;
+      }
 
-    #buttonMenuContainer {
-      background: rgb(242, 242, 242);
-      margin-bottom: 10rem;
-      padding: 1rem;
-    }
+      x-carousel,
+      x-carousel-slideshow {
+        display: block;
+        max-width: 100%;
+        width: 640px;
+      }
 
-    x-dropdown-list {
-      width: 200px;
-    }
+      .card {
+        border-radius: 0.25rem;
+        border: 1px solid #dddbda;
+        box-sizing: border-box;
+      }
 
-    x-carousel,
-    x-carousel-slideshow {
-      display: block;
-      max-width: 100%;
-      width: 640px;
-    }
+      .cardDetails {
+        background: #fff;
+        box-sizing: border-box;
+        height: 6.625rem;
+        padding: 0.75rem;
+        text-align: center;
+      }
 
-    .card {
-      border-radius: .25rem;
-      border: 1px solid #dddbda;
-      box-sizing: border-box;
-    }
+      .cardImage {
+        display: block;
+        max-width: 100%;
+      }
 
-    .cardDetails {
-      background: #fff;
-      box-sizing: border-box;
-      height: 6.625rem;
-      padding: .75rem;
-      text-align: center;
-    }
+      .cardTitle {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0;
+      }
+    </style>
+  </head>
 
-    .cardImage {
-      display: block;
-      max-width: 100%;
-    }
+  <body>
+    <div id="buttonMenuContainer">
+      <x-button-menu>
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+      </x-button-menu>
+    </div>
 
-    .cardTitle {
-      font-size: 1rem;
-      font-weight: 600;
-      margin: 0;
-    }
-  </style>
-
-</head>
-
-<body>
-
-  <div id="buttonMenuContainer">
-    <x-button-menu>
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-    </x-button-menu>
-  </div>
-
-  <!-- <div>
+    <!-- <div>
     <x-dropdown-list>
       <div>Finished</div>
       <div>In Progress</div>
@@ -80,54 +75,52 @@
     </x-dropdown-list>
   </div> -->
 
-  <x-carousel>
-    <div class="card">
-      <img class="cardImage" src="images/carousel/carousel-01.jpg">
-      <div class="cardDetails">
-        <h2 class="cardTitle">First Card</h2>
-        <div class="cardDescription">First card description</div>
+    <x-carousel>
+      <div class="card">
+        <img class="cardImage" src="images/carousel/carousel-01.jpg" />
+        <div class="cardDetails">
+          <h2 class="cardTitle">First Card</h2>
+          <div class="cardDescription">First card description</div>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img class="cardImage" src="images/carousel/carousel-02.jpg">
-      <div class="cardDetails">
-        <h2 class="cardTitle">Second Card</h2>
-        <div class="cardDescription">Second card description</div>
+      <div class="card">
+        <img class="cardImage" src="images/carousel/carousel-02.jpg" />
+        <div class="cardDetails">
+          <h2 class="cardTitle">Second Card</h2>
+          <div class="cardDescription">Second card description</div>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img class="cardImage" src="images/carousel/carousel-03.jpg">
-      <div class="cardDetails">
-        <h2 class="cardTitle">Third Card</h2>
-        <div class="cardDescription">Third card description</div>
+      <div class="card">
+        <img class="cardImage" src="images/carousel/carousel-03.jpg" />
+        <div class="cardDetails">
+          <h2 class="cardTitle">Third Card</h2>
+          <div class="cardDescription">Third card description</div>
+        </div>
       </div>
-    </div>
-  </x-carousel>
+    </x-carousel>
 
-  <x-carousel-slideshow>
-    <div class="card">
-      <img class="cardImage" src="images/carousel/carousel-01.jpg">
-      <div class="cardDetails">
-        <h2 class="cardTitle">First Card</h2>
-        <div class="cardDescription">First card description</div>
+    <x-carousel-slideshow>
+      <div class="card">
+        <img class="cardImage" src="images/carousel/carousel-01.jpg" />
+        <div class="cardDetails">
+          <h2 class="cardTitle">First Card</h2>
+          <div class="cardDescription">First card description</div>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img class="cardImage" src="images/carousel/carousel-02.jpg">
-      <div class="cardDetails">
-        <h2 class="cardTitle">Second Card</h2>
-        <div class="cardDescription">Second card description</div>
+      <div class="card">
+        <img class="cardImage" src="images/carousel/carousel-02.jpg" />
+        <div class="cardDetails">
+          <h2 class="cardTitle">Second Card</h2>
+          <div class="cardDescription">Second card description</div>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img class="cardImage" src="images/carousel/carousel-03.jpg">
-      <div class="cardDetails">
-        <h2 class="cardTitle">Third Card</h2>
-        <div class="cardDescription">Third card description</div>
+      <div class="card">
+        <img class="cardImage" src="images/carousel/carousel-03.jpg" />
+        <div class="cardDetails">
+          <h2 class="cardTitle">Third Card</h2>
+          <div class="cardDescription">Third card description</div>
+        </div>
       </div>
-    </div>
-  </x-carousel-slideshow>
-
-</body>
-
+    </x-carousel-slideshow>
+  </body>
 </html>
