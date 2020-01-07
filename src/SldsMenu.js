@@ -25,7 +25,7 @@ export default class XMenu extends Menu {
           /* slds-dropdown */
           :host {
             min-width: 6rem;
-            maslds-width: 20rem;
+            max-width: 20rem;
             padding: .25rem 0;
             font-size: .75rem;
           }          
