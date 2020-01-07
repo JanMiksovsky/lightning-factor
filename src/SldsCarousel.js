@@ -2,8 +2,8 @@ import * as internal from "../node_modules/elix/src/internal.js";
 import * as template from "../node_modules/elix/src/template.js";
 import Carousel from "../node_modules/elix/src/Carousel.js";
 import CenteredStrip from "../node_modules/elix/src/CenteredStrip.js";
+import SldsPageDot from "./SldsPageDot.js";
 import SlidingStage from "../node_modules/elix/src/SlidingStage.js";
-import XPageDot from "./PageDot.js";
 
 /**
  * SLDS variation of an Elix [Carousel](https://component.kitchen/elix/Carousel).
@@ -13,7 +13,7 @@ export default class XCarousel extends Carousel {
     return Object.assign(super[internal.defaultState], {
       proxyListOverlap: false,
       proxyListPartType: CenteredStrip,
-      proxyPartType: XPageDot,
+      proxyPartType: SldsPageDot,
       showArrowButtons: false,
       stagePartType: SlidingStage
     });
@@ -33,4 +33,4 @@ export default class XCarousel extends Carousel {
   }
 }
 
-customElements.define("x-carousel", XCarousel);
+customElements.define("slds-carousel", XCarousel);

@@ -1,9 +1,9 @@
 import * as internal from "../node_modules/elix/src/internal.js";
 import * as template from "../node_modules/elix/src/template.js";
 import DropdownList from "../node_modules/elix/src/DropdownList.js";
-import XButton from "./Button.js";
-import XMenu from "./Menu.js";
-import XPopup from "./Popup.js";
+import SldsButton from "./SldsButton.js";
+import SldsMenu from "./SldsMenu.js";
+import SldsPopup from "./SldsPopup.js";
 
 /**
  * SLDS variation of an Elix [DropdownList](https://component.kitchen/elix/DropdownList).
@@ -12,9 +12,9 @@ export default class XDropdownList extends DropdownList {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       horizontalAlign: "stretch",
-      menuPartType: XMenu,
-      popupPartType: XPopup,
-      sourcePartType: XButton
+      menuPartType: SldsMenu,
+      popupPartType: SldsPopup,
+      sourcePartType: SldsButton
     });
   }
 
@@ -37,4 +37,4 @@ export default class XDropdownList extends DropdownList {
   }
 }
 
-customElements.define("x-dropdown-list", XDropdownList);
+customElements.define("slds-dropdown-list", XDropdownList);

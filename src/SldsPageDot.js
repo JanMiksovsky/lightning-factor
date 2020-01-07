@@ -33,4 +33,4 @@ export default class XPageDot extends SeamlessButton {
   }
 }
 
-customElements.define("x-page-dot", XPageDot);
+customElements.define("slds-page-dot", XPageDot);

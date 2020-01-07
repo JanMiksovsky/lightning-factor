@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="main.css" />
-    <script type="module" src="./src/ButtonMenu.js"></script>
-    <script type="module" src="./src/Carousel.js"></script>
-    <script type="module" src="./src/CarouselSlideshow.js"></script>
-    <script type="module" src="./src/DropdownList.js"></script>
+    <script type="module" src="./src/SldsButtonMenu.js"></script>
+    <script type="module" src="./src/SldsCarousel.js"></script>
+    <script type="module" src="./src/SldsCarouselSlideshow.js"></script>
+    <script type="module" src="./src/SldsDropdownList.js"></script>
 
     <style>
       body > * + * {
@@ -19,12 +19,12 @@
         padding: 1rem;
       }
 
-      x-dropdown-list {
+      slds-dropdown-list {
         width: 200px;
       }
 
-      x-carousel,
-      x-carousel-slideshow {
+      slds-carousel,
+      slds-carousel-slideshow {
         display: block;
         max-width: 100%;
         width: 640px;
@@ -59,23 +59,26 @@
 
   <body>
     <div id="buttonMenuContainer">
-      <x-button-menu>
+      <slds-button-menu>
         <div>One</div>
         <div>Two</div>
         <div>Three</div>
         <div>Four</div>
-      </x-button-menu>
+      </slds-button-menu>
     </div>
 
-    <!-- <div>
-    <x-dropdown-list>
-      <div>Finished</div>
-      <div>In Progress</div>
-      <div>New</div>
-    </x-dropdown-list>
-  </div> -->
+    <!--
+      Not ready yet
+    <div>
+      <slds-dropdown-list>
+        <div>Finished</div>
+        <div>In Progress</div>
+        <div>New</div>
+      </slds-dropdown-list>
+    </div>
+    -->
 
-    <x-carousel>
+    <slds-carousel>
       <div class="card">
         <img class="cardImage" src="images/carousel/carousel-01.jpg" />
         <div class="cardDetails">
@@ -97,9 +100,9 @@
           <div class="cardDescription">Third card description</div>
         </div>
       </div>
-    </x-carousel>
+    </slds-carousel>
 
-    <x-carousel-slideshow>
+    <slds-carousel-slideshow>
       <div class="card">
         <img class="cardImage" src="images/carousel/carousel-01.jpg" />
         <div class="cardDetails">
@@ -121,6 +124,6 @@
           <div class="cardDescription">Third card description</div>
         </div>
       </div>
-    </x-carousel-slideshow>
+    </slds-carousel-slideshow>
   </body>
 </html>

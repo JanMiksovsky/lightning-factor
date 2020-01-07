@@ -40,7 +40,7 @@ export default class XButton extends SeamlessButton {
           }
 
           :host(:focus) {
-            box-shadow: 0 0 3px #0070D2;
+            boslds-shadow: 0 0 3px #0070D2;
           }
 
           :host(:focus),
@@ -53,4 +53,4 @@ export default class XButton extends SeamlessButton {
   }
 }
 
-customElements.define("x-button", XButton);
+customElements.define("slds-button", XButton);

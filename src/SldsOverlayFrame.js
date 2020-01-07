@@ -31,4 +31,4 @@ export default class XOverlayFrame extends OverlayFrame {
   }
 }
 
-customElements.define("x-overlay-frame", XOverlayFrame);
+customElements.define("slds-overlay-frame", XOverlayFrame);

@@ -1,10 +1,10 @@
-import "./Button.js";
+import "./SldsButton.js";
 import * as internal from "../node_modules/elix/src/internal.js";
 import * as template from "../node_modules/elix/src/template.js";
 import CarouselSlideshow from "../node_modules/elix/src/CarouselSlideshow.js";
 import CenteredStrip from "../node_modules/elix/src/CenteredStrip.js";
+import SldsPageDot from "./SldsPageDot.js";
 import SlidingStage from "../node_modules/elix/src/SlidingStage.js";
-import XPageDot from "./PageDot.js";
 
 /**
  * SLDS variation of an Elix [CarouselSlideshow](https://component.kitchen/elix/CarouselSlideshow).
@@ -27,7 +27,7 @@ export default class XCarouselSlideshow extends CarouselSlideshow {
     return Object.assign(super[internal.defaultState], {
       proxyListOverlap: false,
       proxyListPartType: CenteredStrip,
-      proxyPartType: XPageDot,
+      proxyPartType: SldsPageDot,
       selectionTimerDuration: 5000,
       showArrowButtons: false,
       stagePartType: SlidingStage
@@ -51,10 +51,10 @@ export default class XCarouselSlideshow extends CarouselSlideshow {
     const explorerContainer = base.content.getElementById("explorerContainer");
     if (explorerContainer) {
       const playButtonTemplate = template.html`
-        <x-button id="playButton">
+        <slds-button id="playButton">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon" id="playIcon" viewBox="0 0 52 52"><path d="m8 43.7v-35.4c0-1 1.3-1.7 2.2-0.9l33.2 17.3c0.8 0.6 0.8 1.9 0 2.5l-33.2 17.5c-0.9 0.7-2.2 0.1-2.2-1z"></path></svg>          
           <svg xmlns="http://www.w3.org/2000/svg" class="icon" id="pauseIcon" viewBox="0 0 52 52"><path d="m30 43c0 1 0.9 2 2 2h4c1.1 0 2-1.1 2-2v-34c0-1-0.9-2-2-2h-4c-1.1 0-2 1.1-2 2v34z m-16 0c0 1 0.9 2 2 2h4c1.1 0 2-1.1 2-2v-34c0-1-0.9-2-2-2h-4c-1.1 0-2 1.1-2 2v34z"></path></svg>
-        </x-button>
+        </slds-button>
       `;
       explorerContainer.append(playButtonTemplate.content);
     }
@@ -90,4 +90,4 @@ export default class XCarouselSlideshow extends CarouselSlideshow {
   }
 }
 
-customElements.define("x-carousel-slideshow", XCarouselSlideshow);
+customElements.define("slds-carousel-slideshow", XCarouselSlideshow);
