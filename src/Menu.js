@@ -2,6 +2,9 @@ import * as internal from "../node_modules/elix/src/internal.js";
 import * as template from "../node_modules/elix/src/template.js";
 import Menu from "../node_modules/elix/src/Menu.js";
 
+/**
+ * SLDS variation of an Elix [Menu](https://component.kitchen/elix/Menu).
+ */
 export default class XMenu extends Menu {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
@@ -45,10 +48,6 @@ export default class XMenu extends Menu {
             color: #006dcc;
             text-decoration: none;
             transition: color .1s linear;
-          }
-
-          ::slotted(*) {
-            /* cursor: pointer; */
           }
 
           ::slotted(*) {

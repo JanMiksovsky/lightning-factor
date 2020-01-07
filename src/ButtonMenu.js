@@ -5,6 +5,9 @@ import XMenu from "./Menu.js";
 import MenuButton from "../node_modules/elix/src/MenuButton.js";
 import XPopup from "./Popup.js";
 
+/**
+ * SLDS variation of an Elix [MenuButton](https://component.kitchen/elix/MenuButton).
+ */
 export default class XButtonMenu extends MenuButton {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {

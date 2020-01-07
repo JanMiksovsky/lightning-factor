@@ -1,1 +1,1 @@
-
+This repository explores the possibility of implementing web components for the Salesforce Lightning Design System (SLDS) on top of a generic component library that was designed to be themed and extended. The generic component library used for this experiment is [Elix](https://component.kitchen/elix), which may be the only existing web component library sufficiently powerful to meet the needs of SLDS.

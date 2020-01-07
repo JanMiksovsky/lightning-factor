@@ -2,6 +2,11 @@ import * as internal from "../node_modules/elix/src/internal.js";
 import * as template from "../node_modules/elix/src/template.js";
 import SeamlessButton from "../node_modules/elix/src/SeamlessButton.js";
 
+/**
+ * SLDS variation of an Elix [PageDot](https://component.kitchen/elix/PageDot).
+ *
+ * This is used by the Carousel component and its variations.
+ */
 export default class XPageDot extends SeamlessButton {
   get [internal.template]() {
     return template.concat(

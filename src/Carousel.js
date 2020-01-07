@@ -5,6 +5,9 @@ import CenteredStrip from "../node_modules/elix/src/CenteredStrip.js";
 import SlidingStage from "../node_modules/elix/src/SlidingStage.js";
 import XPageDot from "./PageDot.js";
 
+/**
+ * SLDS variation of an Elix [Carousel](https://component.kitchen/elix/Carousel).
+ */
 export default class XCarousel extends Carousel {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {

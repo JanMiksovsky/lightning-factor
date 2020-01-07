@@ -1,4 +1,4 @@
-import './Button.js';
+import "./Button.js";
 import * as internal from "../node_modules/elix/src/internal.js";
 import * as template from "../node_modules/elix/src/template.js";
 import CarouselSlideshow from "../node_modules/elix/src/CarouselSlideshow.js";
@@ -6,10 +6,17 @@ import CenteredStrip from "../node_modules/elix/src/CenteredStrip.js";
 import SlidingStage from "../node_modules/elix/src/SlidingStage.js";
 import XPageDot from "./PageDot.js";
 
+/**
+ * SLDS variation of an Elix [CarouselSlideshow](https://component.kitchen/elix/CarouselSlideshow).
+ *
+ * In the Lightning base components set, the carousel slideshow is implemented as the default
+ * mode of a lightning-carousel rather than a separate component. However, that arrangement
+ * unnecessarily complicates the base lightning-carousel component.
+ */
 export default class XCarouselSlideshow extends CarouselSlideshow {
   [internal.componentDidMount]() {
     super[internal.componentDidMount]();
-    this[internal.ids].playButton.addEventListener('click', () => {
+    this[internal.ids].playButton.addEventListener("click", () => {
       this[internal.raiseChangeEvents] = true;
       this.playing = !this.playing;
       this[internal.raiseChangeEvents] = false;
@@ -31,8 +38,8 @@ export default class XCarouselSlideshow extends CarouselSlideshow {
     super[internal.render](changed);
     if (changed.playing) {
       const { playing } = this[internal.state];
-      this[internal.ids].playIcon.style.display = playing ? 'none' : 'block';
-      this[internal.ids].pauseIcon.style.display = playing ? 'block' : 'none';
+      this[internal.ids].playIcon.style.display = playing ? "none" : "block";
+      this[internal.ids].pauseIcon.style.display = playing ? "block" : "none";
     }
   }
 
@@ -41,7 +48,7 @@ export default class XCarouselSlideshow extends CarouselSlideshow {
 
     // Graft in play/pause button.
     // TODO: Expose part type for button.
-    const explorerContainer = base.content.getElementById('explorerContainer');
+    const explorerContainer = base.content.getElementById("explorerContainer");
     if (explorerContainer) {
       const playButtonTemplate = template.html`
         <x-button id="playButton">

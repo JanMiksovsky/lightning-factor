@@ -2,6 +2,9 @@ import * as internal from "../node_modules/elix/src/internal.js";
 import * as template from "../node_modules/elix/src/template.js";
 import SeamlessButton from "../node_modules/elix/src/SeamlessButton.js";
 
+/**
+ * SLDS variation of an Elix [SeamlessButton](https://component.kitchen/elix/SeamlessButton).
+ */
 export default class XButton extends SeamlessButton {
   get [internal.template]() {
     return template.concat(
