@@ -8,6 +8,8 @@ Things to try:
 
 - In the carousels, navigate the selection with all interaction modes: mouse, keyboard, touch gesture (on a mobile device, or using the mobile emulator in dev tools), and trackpad swipe gesture (on a laptop with a trackpad). The exising lightning-carousel component supports the mouse and keyboard, but appears to have limited (?) touch support, and no support for trackpad gestures.
 
+- Open the Network panel, load the page, and observe that _all the source modules are being loaded directly in the browser_. There is no build or bundling step required here, because the Elix component core is designed using only native browser APIs and no build-time dependencies. The size of the code transferred is nevertheless fairly small. In a production application, of course, the demo code files would be bundled and minified for better performance; the size of the resulting bundle would likely be in the ~20KB range.
+
 Things to observe in the code in the `/src` folder:
 
 - The code required to build each SLDS component is generally extremely small.
