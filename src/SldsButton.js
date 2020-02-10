@@ -1,6 +1,6 @@
-import * as internal from "../node_modules/elix/src/internal.js";
-import * as template from "../node_modules/elix/src/template.js";
-import SeamlessButton from "../node_modules/elix/src/SeamlessButton.js";
+import * as internal from "../node_modules/elix/src/base/internal.js";
+import * as template from "../node_modules/elix/src/core/template.js";
+import SeamlessButton from "../node_modules/elix/src/base/SeamlessButton.js";
 
 /**
  * SLDS variation of an Elix [SeamlessButton](https://component.kitchen/elix/SeamlessButton).

@@ -1,6 +1,6 @@
-import * as internal from "../node_modules/elix/src/internal.js";
-import * as template from "../node_modules/elix/src/template.js";
-import Menu from "../node_modules/elix/src/Menu.js";
+import * as internal from "../node_modules/elix/src/base/internal.js";
+import * as template from "../node_modules/elix/src/core/template.js";
+import Menu from "../node_modules/elix/src/base/Menu.js";
 
 /**
  * SLDS variation of an Elix [Menu](https://component.kitchen/elix/Menu).

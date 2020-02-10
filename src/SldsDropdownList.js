@@ -1,6 +1,6 @@
-import * as internal from "../node_modules/elix/src/internal.js";
-import * as template from "../node_modules/elix/src/template.js";
-import DropdownList from "../node_modules/elix/src/DropdownList.js";
+import * as internal from "../node_modules/elix/src/base/internal.js";
+import * as template from "../node_modules/elix/src/core/template.js";
+import DropdownList from "../node_modules/elix/src/base/DropdownList.js";
 import SldsButton from "./SldsButton.js";
 import SldsMenu from "./SldsMenu.js";
 import SldsPopup from "./SldsPopup.js";

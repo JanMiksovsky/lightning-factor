@@ -1,9 +1,9 @@
-import * as internal from "../node_modules/elix/src/internal.js";
-import * as template from "../node_modules/elix/src/template.js";
-import Carousel from "../node_modules/elix/src/Carousel.js";
-import CenteredStrip from "../node_modules/elix/src/CenteredStrip.js";
+import * as internal from "../node_modules/elix/src/base/internal.js";
+import * as template from "../node_modules/elix/src/core/template.js";
+import Carousel from "../node_modules/elix/src/base/Carousel.js";
+import CenteredStrip from "../node_modules/elix/src/base/CenteredStrip.js";
 import SldsPageDot from "./SldsPageDot.js";
-import SlidingStage from "../node_modules/elix/src/SlidingStage.js";
+import SlidingStage from "../node_modules/elix/src/base/SlidingStage.js";
 
 /**
  * SLDS variation of an Elix [Carousel](https://component.kitchen/elix/Carousel).

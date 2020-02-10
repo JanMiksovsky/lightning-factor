@@ -1,6 +1,6 @@
-import * as internal from "../node_modules/elix/src/internal.js";
-import * as template from "../node_modules/elix/src/template.js";
-import MenuButton from "../node_modules/elix/src/MenuButton.js";
+import * as internal from "../node_modules/elix/src/base/internal.js";
+import * as template from "../node_modules/elix/src/core/template.js";
+import MenuButton from "../node_modules/elix/src/base/MenuButton.js";
 import SldsButton from "./SldsButton.js";
 import SldsMenu from "./SldsMenu.js";
 import SldsPopup from "./SldsPopup.js";
@@ -22,10 +22,10 @@ export default class XButtonMenu extends MenuButton {
   }
 
   get [internal.template]() {
-    const base = super[internal.template];
+    const result = super[internal.template];
 
     // Inject an SLDS down icon into the source slot.
-    const sourceSlot = base.content.querySelector('slot[name="source"]');
+    const sourceSlot = result.content.querySelector('slot[name="source"]');
     if (sourceSlot) {
       const downIconTemplate = template.html`
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="downIcon"><path d="M3.8 6.5h16.4c.4 0 .8.6.4 1l-8 9.8c-.3.3-.9.3-1.2 0l-8-9.8c-.4-.4-.1-1 .4-1z"></path></svg>
@@ -34,15 +34,9 @@ export default class XButtonMenu extends MenuButton {
       sourceSlot.append(downIconTemplate.content);
     }
 
-    return template.concat(
-      base,
+    result.content.append(
       template.html`
         <style>
-          /* Turn off some Elix styles */
-          #source {
-            padding: 0;
-          }
-
           #popup {
             margin-top: .125rem;
             margin-bottom: .125rem;            
@@ -65,8 +59,9 @@ export default class XButtonMenu extends MenuButton {
             height: .875rem;            
           }
         </style>
-      `
+      `.content
     );
+    return result;
   }
 }
 

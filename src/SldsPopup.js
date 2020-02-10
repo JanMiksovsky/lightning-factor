@@ -1,5 +1,5 @@
-import * as internal from "../node_modules/elix/src/internal.js";
-import Popup from "../node_modules/elix/src/Popup.js";
+import * as internal from "../node_modules/elix/src/base/internal.js";
+import Popup from "../node_modules/elix/src/base/Popup.js";
 import SldsOverlayFrame from "./SldsOverlayFrame.js";
 
 /**
