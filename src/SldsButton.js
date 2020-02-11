@@ -7,8 +7,8 @@ import SeamlessButton from "../node_modules/elix/src/base/SeamlessButton.js";
  */
 export default class SldsButton extends SeamlessButton {
   get [internal.template]() {
-    return template.concat(
-      super[internal.template],
+    const result = super[internal.template];
+    result.content.append(
       template.html`
         <style>
           /* slds-button */
@@ -48,8 +48,9 @@ export default class SldsButton extends SeamlessButton {
             color: #005fb2;
           }
         </style>
-      `
+      `.content
     );
+    return result;
   }
 }
 

@@ -10,12 +10,13 @@ import OverlayFrame from "../node_modules/elix/src/base/OverlayFrame.js";
  */
 export default class SldsOverlayFrame extends OverlayFrame {
   get [internal.template]() {
-    return template.concat(
-      super[internal.template],
+    const result = super[internal.template];
+    result.content.append(
       template.html`
         <style>
           /* slds-dropdown */
           :host {
+            background: white;
             min-width: 6rem;
             max-width: 20rem;
             border: 1px solid #dddbda;
@@ -26,8 +27,9 @@ export default class SldsOverlayFrame extends OverlayFrame {
             box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
           }
         </style>
-      `
+      `.content
     );
+    return result;
   }
 }
 

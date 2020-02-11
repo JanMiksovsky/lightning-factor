@@ -4,6 +4,7 @@ import MenuButton from "../node_modules/elix/src/base/MenuButton.js";
 import SldsButton from "./SldsButton.js";
 import SldsMenu from "./SldsMenu.js";
 import SldsPopup from "./SldsPopup.js";
+import SldsOverlayFrame from "./SldsOverlayFrame.js";
 
 /**
  * SLDS variation of an Elix [MenuButton](https://component.kitchen/elix/MenuButton).
@@ -14,6 +15,7 @@ import SldsPopup from "./SldsPopup.js";
 export default class SldsButtonMenu extends MenuButton {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
+      framePartType: SldsOverlayFrame,
       generic: false,
       popupPartType: SldsPopup,
       menuPartType: SldsMenu,
@@ -40,11 +42,6 @@ export default class SldsButtonMenu extends MenuButton {
           #popup {
             margin-top: .125rem;
             margin-bottom: .125rem;            
-          }
-
-          #menu {
-            background: inherit;
-            padding: 0;
           }
 
           /* .slds-button_icon-border */
