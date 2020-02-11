@@ -8,7 +8,7 @@ import OverlayFrame from "../node_modules/elix/src/base/OverlayFrame.js";
  * In SLDS, this isn't offered as a standalone component, but doing so here means that
  * we can easily add the SLDS overlay style to anything with a popup.
  */
-export default class XOverlayFrame extends OverlayFrame {
+export default class SldsOverlayFrame extends OverlayFrame {
   get [internal.template]() {
     return template.concat(
       super[internal.template],
@@ -31,4 +31,4 @@ export default class XOverlayFrame extends OverlayFrame {
   }
 }
 
-customElements.define("slds-overlay-frame", XOverlayFrame);
+customElements.define("slds-overlay-frame", SldsOverlayFrame);

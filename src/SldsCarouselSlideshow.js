@@ -13,7 +13,7 @@ import SlidingStage from "../node_modules/elix/src/base/SlidingStage.js";
  * mode of a lightning-carousel rather than a separate component. However, that arrangement
  * unnecessarily complicates the base lightning-carousel component.
  */
-export default class XCarouselSlideshow extends CarouselSlideshow {
+export default class SldsCarouselSlideshow extends CarouselSlideshow {
   [internal.componentDidMount]() {
     super[internal.componentDidMount]();
     this[internal.ids].playButton.addEventListener("click", () => {
@@ -90,4 +90,4 @@ export default class XCarouselSlideshow extends CarouselSlideshow {
   }
 }
 
-customElements.define("slds-carousel-slideshow", XCarouselSlideshow);
+customElements.define("slds-carousel-slideshow", SldsCarouselSlideshow);

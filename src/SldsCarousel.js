@@ -8,7 +8,7 @@ import SlidingStage from "../node_modules/elix/src/base/SlidingStage.js";
 /**
  * SLDS variation of an Elix [Carousel](https://component.kitchen/elix/Carousel).
  */
-export default class XCarousel extends Carousel {
+export default class SldsCarousel extends Carousel {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       proxyListOverlap: false,
@@ -33,4 +33,4 @@ export default class XCarousel extends Carousel {
   }
 }
 
-customElements.define("slds-carousel", XCarousel);
+customElements.define("slds-carousel", SldsCarousel);

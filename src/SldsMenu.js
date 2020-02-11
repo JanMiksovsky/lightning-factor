@@ -5,7 +5,7 @@ import Menu from "../node_modules/elix/src/base/Menu.js";
 /**
  * SLDS variation of an Elix [Menu](https://component.kitchen/elix/Menu).
  */
-export default class XMenu extends Menu {
+export default class SldsMenu extends Menu {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       generic: false

@@ -11,7 +11,7 @@ import SldsPopup from "./SldsPopup.js";
  * Note: SLDS calls this a "button menu"; Elix calls this a "menu button".
  * They're the same thing.
  */
-export default class XButtonMenu extends MenuButton {
+export default class SldsButtonMenu extends MenuButton {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       generic: false,
@@ -65,4 +65,4 @@ export default class XButtonMenu extends MenuButton {
   }
 }
 
-customElements.define("slds-button-menu", XButtonMenu);
+customElements.define("slds-button-menu", SldsButtonMenu);

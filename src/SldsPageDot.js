@@ -7,7 +7,7 @@ import SeamlessButton from "../node_modules/elix/src/base/SeamlessButton.js";
  *
  * This is used by the Carousel component and its variations.
  */
-export default class XPageDot extends SeamlessButton {
+export default class SldsPageDot extends SeamlessButton {
   get [internal.template]() {
     return template.concat(
       super[internal.template],
@@ -33,4 +33,4 @@ export default class XPageDot extends SeamlessButton {
   }
 }
 
-customElements.define("slds-page-dot", XPageDot);
+customElements.define("slds-page-dot", SldsPageDot);

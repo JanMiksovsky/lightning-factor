@@ -5,7 +5,7 @@ import SeamlessButton from "../node_modules/elix/src/base/SeamlessButton.js";
 /**
  * SLDS variation of an Elix [SeamlessButton](https://component.kitchen/elix/SeamlessButton).
  */
-export default class XButton extends SeamlessButton {
+export default class SldsButton extends SeamlessButton {
   get [internal.template]() {
     return template.concat(
       super[internal.template],
@@ -53,4 +53,4 @@ export default class XButton extends SeamlessButton {
   }
 }
 
-customElements.define("slds-button", XButton);
+customElements.define("slds-button", SldsButton);

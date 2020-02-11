@@ -5,7 +5,7 @@ import SldsOverlayFrame from "./SldsOverlayFrame.js";
 /**
  * SLDS variation of an Elix [Popup](https://component.kitchen/elix/Popup).
  */
-export default class XPopup extends Popup {
+export default class SldsPopup extends Popup {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       framePartType: SldsOverlayFrame
@@ -13,4 +13,4 @@ export default class XPopup extends Popup {
   }
 }
 
-customElements.define("slds-popup", XPopup);
+customElements.define("slds-popup", SldsPopup);

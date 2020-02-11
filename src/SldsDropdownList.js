@@ -8,7 +8,7 @@ import SldsPopup from "./SldsPopup.js";
 /**
  * SLDS variation of an Elix [DropdownList](https://component.kitchen/elix/DropdownList).
  */
-export default class XDropdownList extends DropdownList {
+export default class SldsDropdownList extends DropdownList {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       horizontalAlign: "stretch",
@@ -37,4 +37,4 @@ export default class XDropdownList extends DropdownList {
   }
 }
 
-customElements.define("slds-dropdown-list", XDropdownList);
+customElements.define("slds-dropdown-list", SldsDropdownList);
