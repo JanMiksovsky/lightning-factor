@@ -13,8 +13,8 @@ export default class SldsMenu extends Menu {
   }
 
   get [internal.template]() {
-    return template.concat(
-      super[internal.template],
+    const result = super[internal.template];
+    result.content.append(
       template.html`
         <style>
           /* Turn off some Elix styles */
@@ -65,8 +65,9 @@ export default class SldsMenu extends Menu {
             background-color: #f3f2f2;
           }
         </style>
-      `
+      `.content
     );
+    return result;
   }
 }
 

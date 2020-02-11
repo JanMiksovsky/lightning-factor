@@ -19,8 +19,8 @@ export default class SldsDropdownList extends DropdownList {
   }
 
   get [internal.template]() {
-    return template.concat(
-      super[internal.template],
+    const result = super[internal.template];
+    result.content.append(
       template.html`
         <style>
           /* slids-input */
@@ -32,8 +32,9 @@ export default class SldsDropdownList extends DropdownList {
             padding: 0 0.75rem;
           }
         </style>
-      `
+      `.content
     );
+    return result;
   }
 }
 

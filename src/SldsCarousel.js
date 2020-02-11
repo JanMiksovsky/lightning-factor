@@ -20,16 +20,17 @@ export default class SldsCarousel extends Carousel {
   }
 
   get [internal.template]() {
-    return template.concat(
-      super[internal.template],
+    const result = super[internal.template];
+    result.content.append(
       template.html`
         <style>
           #proxyList {
             margin-top: 0.5em;
           }
         </style>
-      `
+      `.content
     );
+    return result;
   }
 }
 

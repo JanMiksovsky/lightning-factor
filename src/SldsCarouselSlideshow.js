@@ -44,11 +44,13 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
   }
 
   get [internal.template]() {
-    const base = super[internal.template];
+    const result = super[internal.template];
 
     // Graft in play/pause button.
     // TODO: Expose part type for button.
-    const explorerContainer = base.content.getElementById("explorerContainer");
+    const explorerContainer = result.content.getElementById(
+      "explorerContainer"
+    );
     if (explorerContainer) {
       const playButtonTemplate = template.html`
         <slds-button id="playButton">
@@ -59,8 +61,7 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
       explorerContainer.append(playButtonTemplate.content);
     }
 
-    return template.concat(
-      base,
+    result.content.append(
       template.html`
         <style>
           #proxyList {
@@ -85,8 +86,9 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
             width: 1rem;
           }
         </style>
-      `
+      `.content
     );
+    return result;
   }
 }
 
