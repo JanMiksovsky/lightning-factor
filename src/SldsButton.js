@@ -1,11 +1,11 @@
 import * as internal from "../node_modules/elix/src/base/internal.js";
 import * as template from "../node_modules/elix/src/core/template.js";
-import SeamlessButton from "../node_modules/elix/src/base/SeamlessButton.js";
+import Button from "../node_modules/elix/src/base/Button.js";
 
 /**
  * SLDS variation of an Elix [SeamlessButton](https://component.kitchen/elix/SeamlessButton).
  */
-export default class SldsButton extends SeamlessButton {
+export default class SldsButton extends Button {
   get [internal.template]() {
     const result = super[internal.template];
     result.content.append(
@@ -46,6 +46,12 @@ export default class SldsButton extends SeamlessButton {
           :host(:focus),
           :host(:hover) {
             color: #005fb2;
+          }
+
+          /* Making this up, not sure if/how SLDS expects to center content. */
+          #inner {
+            display: flex;
+            justify-content: center;
           }
         </style>
       `.content

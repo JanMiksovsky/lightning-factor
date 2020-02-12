@@ -1,4 +1,3 @@
-import "./SldsButton.js";
 import * as internal from "../node_modules/elix/src/base/internal.js";
 import * as template from "../node_modules/elix/src/core/template.js";
 import CarouselSlideshow from "../node_modules/elix/src/base/CarouselSlideshow.js";
