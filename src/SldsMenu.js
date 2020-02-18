@@ -1,5 +1,5 @@
 import * as internal from "../node_modules/elix/src/base/internal.js";
-import * as template from "../node_modules/elix/src/core/template.js";
+import html from "../node_modules/elix/src/core/html.js";
 import Menu from "../node_modules/elix/src/base/Menu.js";
 
 /**
@@ -15,7 +15,7 @@ export default class SldsMenu extends Menu {
   get [internal.template]() {
     const result = super[internal.template];
     result.content.append(
-      template.html`
+      html`
         <style>
           /* Turn off some Elix styles */
           :host {
@@ -26,9 +26,9 @@ export default class SldsMenu extends Menu {
           :host {
             min-width: 6rem;
             max-width: 20rem;
-            padding: .25rem 0;
-            font-size: .75rem;
-          }          
+            padding: 0.25rem 0;
+            font-size: 0.75rem;
+          }
 
           /* .slds-dropdown__item */
           ::slotted(*) {
@@ -37,7 +37,7 @@ export default class SldsMenu extends Menu {
           }
 
           ::slotted(*) {
-            font-size: .75rem;            
+            font-size: 0.75rem;
           }
 
           ::slotted(*) {
@@ -47,14 +47,14 @@ export default class SldsMenu extends Menu {
           ::slotted(*) {
             color: #006dcc;
             text-decoration: none;
-            transition: color .1s linear;
+            transition: color 0.1s linear;
           }
 
           ::slotted(*) {
             position: relative;
             justify-content: space-between;
             align-items: center;
-            padding: .5rem .75rem;
+            padding: 0.5rem 0.75rem;
             color: #080707;
             white-space: nowrap;
             /* cursor: pointer; */
@@ -65,7 +65,7 @@ export default class SldsMenu extends Menu {
             background-color: #f3f2f2;
           }
         </style>
-      `.content
+      `
     );
     return result;
   }

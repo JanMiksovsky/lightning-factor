@@ -1,7 +1,7 @@
 import * as internal from "../node_modules/elix/src/base/internal.js";
-import * as template from "../node_modules/elix/src/core/template.js";
 import CarouselSlideshow from "../node_modules/elix/src/base/CarouselSlideshow.js";
 import CenteredStrip from "../node_modules/elix/src/base/CenteredStrip.js";
+import html from "../node_modules/elix/src/core/html.js";
 import SldsPageDot from "./SldsPageDot.js";
 import SlidingStage from "../node_modules/elix/src/base/SlidingStage.js";
 
@@ -51,17 +51,34 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
       "explorerContainer"
     );
     if (explorerContainer) {
-      const playButtonTemplate = template.html`
+      explorerContainer.append(html`
         <slds-button id="playButton">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon" id="playIcon" viewBox="0 0 52 52"><path d="m8 43.7v-35.4c0-1 1.3-1.7 2.2-0.9l33.2 17.3c0.8 0.6 0.8 1.9 0 2.5l-33.2 17.5c-0.9 0.7-2.2 0.1-2.2-1z"></path></svg>          
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon" id="pauseIcon" viewBox="0 0 52 52"><path d="m30 43c0 1 0.9 2 2 2h4c1.1 0 2-1.1 2-2v-34c0-1-0.9-2-2-2h-4c-1.1 0-2 1.1-2 2v34z m-16 0c0 1 0.9 2 2 2h4c1.1 0 2-1.1 2-2v-34c0-1-0.9-2-2-2h-4c-1.1 0-2 1.1-2 2v34z"></path></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            id="playIcon"
+            viewBox="0 0 52 52"
+          >
+            <path
+              d="m8 43.7v-35.4c0-1 1.3-1.7 2.2-0.9l33.2 17.3c0.8 0.6 0.8 1.9 0 2.5l-33.2 17.5c-0.9 0.7-2.2 0.1-2.2-1z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            id="pauseIcon"
+            viewBox="0 0 52 52"
+          >
+            <path
+              d="m30 43c0 1 0.9 2 2 2h4c1.1 0 2-1.1 2-2v-34c0-1-0.9-2-2-2h-4c-1.1 0-2 1.1-2 2v34z m-16 0c0 1 0.9 2 2 2h4c1.1 0 2-1.1 2-2v-34c0-1-0.9-2-2-2h-4c-1.1 0-2 1.1-2 2v34z"
+            ></path>
+          </svg>
         </slds-button>
-      `;
-      explorerContainer.append(playButtonTemplate.content);
+      `);
     }
 
     result.content.append(
-      template.html`
+      html`
         <style>
           #proxyList {
             margin-top: 0.5em;
@@ -85,7 +102,7 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
             width: 1rem;
           }
         </style>
-      `.content
+      `
     );
     return result;
   }

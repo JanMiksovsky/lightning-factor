@@ -1,10 +1,10 @@
 import * as internal from "../node_modules/elix/src/base/internal.js";
-import * as template from "../node_modules/elix/src/core/template.js";
+import html from "../node_modules/elix/src/core/html.js";
 import MenuButton from "../node_modules/elix/src/base/MenuButton.js";
 import SldsButton from "./SldsButton.js";
 import SldsMenu from "./SldsMenu.js";
-import SldsPopup from "./SldsPopup.js";
 import SldsOverlayFrame from "./SldsOverlayFrame.js";
+import SldsPopup from "./SldsPopup.js";
 import SldsUpDownToggle from "./SldsUpDownToggle.js";
 
 /**
@@ -28,11 +28,11 @@ export default class SldsButtonMenu extends MenuButton {
   get [internal.template]() {
     const result = super[internal.template];
     result.content.append(
-      template.html`
+      html`
         <style>
           #popup {
-            margin-top: .125rem;
-            margin-bottom: .125rem;            
+            margin-top: 0.125rem;
+            margin-bottom: 0.125rem;
           }
 
           /* .slds-button_icon-border */
@@ -41,7 +41,7 @@ export default class SldsButtonMenu extends MenuButton {
             height: 2rem;
           }
         </style>
-      `.content
+      `
     );
     return result;
   }

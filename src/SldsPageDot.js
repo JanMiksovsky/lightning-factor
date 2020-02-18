@@ -1,6 +1,6 @@
 import * as internal from "../node_modules/elix/src/base/internal.js";
-import * as template from "../node_modules/elix/src/core/template.js";
 import Button from "../node_modules/elix/src/base/Button.js";
+import html from "../node_modules/elix/src/core/html.js";
 
 /**
  * SLDS variation of an Elix [PageDot](https://component.kitchen/elix/PageDot).
@@ -11,24 +11,24 @@ export default class SldsPageDot extends Button {
   get [internal.template]() {
     const result = super[internal.template];
     result.content.append(
-      template.html`
+      html`
         <style>
           /* slds-button */
           :host {
-              width: 1rem;
-              height: 1rem;
-              background: #fff;
-              border: 1px solid #dddbda;
-              border-radius: 50%;
-              margin: 0 .25rem;
+            width: 1rem;
+            height: 1rem;
+            background: #fff;
+            border: 1px solid #dddbda;
+            border-radius: 50%;
+            margin: 0 0.25rem;
           }
 
           :host([selected]) {
-              background: #0070d2;
-              border-color: #0070d2;              
+            background: #0070d2;
+            border-color: #0070d2;
           }
         </style>
-      `.content
+      `
     );
     return result;
   }

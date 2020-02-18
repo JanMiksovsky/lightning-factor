@@ -1,7 +1,7 @@
 import * as internal from "../node_modules/elix/src/base/internal.js";
-import * as template from "../node_modules/elix/src/core/template.js";
 import Carousel from "../node_modules/elix/src/base/Carousel.js";
 import CenteredStrip from "../node_modules/elix/src/base/CenteredStrip.js";
+import html from "../node_modules/elix/src/core/html.js";
 import SldsPageDot from "./SldsPageDot.js";
 import SlidingStage from "../node_modules/elix/src/base/SlidingStage.js";
 
@@ -22,13 +22,13 @@ export default class SldsCarousel extends Carousel {
   get [internal.template]() {
     const result = super[internal.template];
     result.content.append(
-      template.html`
+      html`
         <style>
-          #proxyList {
+          [part~="proxy-list"] {
             margin-top: 0.5em;
           }
         </style>
-      `.content
+      `
     );
     return result;
   }

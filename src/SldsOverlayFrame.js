@@ -1,5 +1,5 @@
 import * as internal from "../node_modules/elix/src/base/internal.js";
-import * as template from "../node_modules/elix/src/core/template.js";
+import html from "../node_modules/elix/src/core/html.js";
 import OverlayFrame from "../node_modules/elix/src/base/OverlayFrame.js";
 
 /**
@@ -12,7 +12,7 @@ export default class SldsOverlayFrame extends OverlayFrame {
   get [internal.template]() {
     const result = super[internal.template];
     result.content.append(
-      template.html`
+      html`
         <style>
           /* slds-dropdown */
           :host {
@@ -20,14 +20,14 @@ export default class SldsOverlayFrame extends OverlayFrame {
             min-width: 6rem;
             max-width: 20rem;
             border: 1px solid #dddbda;
-            border-radius: .25rem;
-            padding: .25rem 0;
-            font-size: .75rem;
+            border-radius: 0.25rem;
+            padding: 0.25rem 0;
+            font-size: 0.75rem;
             background: #fff;
-            box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
+            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
           }
         </style>
-      `.content
+      `
     );
     return result;
   }
