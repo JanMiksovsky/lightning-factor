@@ -23,7 +23,7 @@ export default class SldsDropdownList extends DropdownList {
     result.content.append(
       html`
         <style>
-          /* slids-input */
+          /* slds-input */
           :host {
             height: 1.875rem;
           }
