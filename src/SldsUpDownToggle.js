@@ -35,8 +35,8 @@ class SldsUpDownToggle extends UpDownToggle {
     result.content.append(
       html`
         <style>
-          #downIcon,
-          #upIcon {
+          [part~="down-icon"],
+          [part~="up-icon"] {
             fill: currentColor;
             width: 0.875rem;
             height: 0.875rem;

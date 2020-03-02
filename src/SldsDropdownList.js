@@ -28,7 +28,7 @@ export default class SldsDropdownList extends DropdownList {
             height: 1.875rem;
           }
 
-          #source {
+          [part~="source"] {
             padding: 0 0.75rem;
           }
         </style>

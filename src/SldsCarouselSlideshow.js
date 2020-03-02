@@ -37,7 +37,7 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
     super[internal.render](changed);
     if (changed.playing) {
       const { playing } = this[internal.state];
-      this[internal.ids].playIcon.style.display = playing ? "none" : "block";
+      this[internal.ids].playingIcon.style.display = playing ? "none" : "block";
       this[internal.ids].pauseIcon.style.display = playing ? "block" : "none";
     }
   }
@@ -52,11 +52,11 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
     );
     if (explorerContainer) {
       explorerContainer.append(html`
-        <slds-button id="playButton">
+        <slds-button id="playButton" part="play-button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="icon"
-            id="playIcon"
+            id="playingIcon"
+            part="icon playing-icon"
             viewBox="0 0 52 52"
           >
             <path
@@ -65,8 +65,8 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="icon"
             id="pauseIcon"
+            part="icon pause-icon"
             viewBox="0 0 52 52"
           >
             <path
@@ -80,11 +80,11 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
     result.content.append(
       html`
         <style>
-          #proxyList {
+          [part~="proxy-list"] {
             margin-top: 0.5em;
           }
 
-          #playButton {
+          [part~="play-button"] {
             background: white;
             bottom: 0;
             color: #706e6b;
@@ -96,7 +96,7 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
             width: 1.25rem;
           }
 
-          .icon {
+          [part~="icon"] {
             fill: currentColor;
             height: 1rem;
             width: 1rem;

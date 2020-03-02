@@ -30,15 +30,15 @@ export default class SldsButtonMenu extends MenuButton {
     result.content.append(
       html`
         <style>
-          #popup {
-            margin-top: 0.125rem;
-            margin-bottom: 0.125rem;
-          }
-
           /* .slds-button_icon-border */
-          #source {
+          :host {
             width: 2rem;
             height: 2rem;
+          }
+
+          [part~="popup"] {
+            margin-top: 0.125rem;
+            margin-bottom: 0.125rem;
           }
         </style>
       `
