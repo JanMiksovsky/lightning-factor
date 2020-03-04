@@ -4,6 +4,7 @@ import html from "../node_modules/elix/src/core/html.js";
 import SldsButton from "./SldsButton.js";
 import SldsMenu from "./SldsMenu.js";
 import SldsPopup from "./SldsPopup.js";
+import SldsUpDownToggle from "./SldsUpDownToggle.js";
 
 /**
  * SLDS variation of an Elix [DropdownList](https://component.kitchen/elix/DropdownList).
@@ -14,6 +15,7 @@ export default class SldsDropdownList extends DropdownList {
       horizontalAlign: "stretch",
       menuPartType: SldsMenu,
       popupPartType: SldsPopup,
+      popupTogglePartType: SldsUpDownToggle,
       sourcePartType: SldsButton
     });
   }
@@ -29,6 +31,17 @@ export default class SldsDropdownList extends DropdownList {
           }
 
           [part~="source"] {
+            align-items: start;
+            color: inherit;
+          }
+
+          [part~="value"] {
+            flex: 1;
+            text-align: start;
+          }
+
+          [part~="value"],
+          [part~="popup-toggle"] {
             padding: 0 0.75rem;
           }
         </style>

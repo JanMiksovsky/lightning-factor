@@ -3,7 +3,7 @@ import Button from "../node_modules/elix/src/base/Button.js";
 import html from "../node_modules/elix/src/core/html.js";
 
 /**
- * SLDS variation of an Elix [SeamlessButton](https://component.kitchen/elix/SeamlessButton).
+ * SLDS variation of an Elix [Button](https://component.kitchen/elix/Button).
  */
 export default class SldsButton extends Button {
   get [internal.template]() {
@@ -18,6 +18,7 @@ export default class SldsButton extends Button {
             background-clip: border-box;
             border: 1px solid transparent;
             border-radius: 0.25rem;
+            box-sizing: border-box;
             line-height: 1.875rem;
             text-decoration: none;
             color: #0070d2;
